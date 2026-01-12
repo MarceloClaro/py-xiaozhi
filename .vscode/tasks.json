@@ -1,0 +1,222 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run: GUI Mode (WebSocket)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "main.py",
+                "--mode",
+                "gui",
+                "--protocol",
+                "websocket"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run: CLI Mode (WebSocket)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "main.py",
+                "--mode",
+                "cli",
+                "--protocol",
+                "websocket"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run: GUI Mode (MQTT)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "main.py",
+                "--mode",
+                "gui",
+                "--protocol",
+                "mqtt"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run: Skip Activation (Debug)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "main.py",
+                "--skip-activation"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Format: Black (All Files)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-m",
+                "black",
+                "src/",
+                "main.py",
+                "scripts/"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Lint: Flake8 (Check All)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-m",
+                "flake8",
+                "src/",
+                "main.py",
+                "--max-line-length=88",
+                "--extend-ignore=E203,W503,E501"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Test: Camera Scanner",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "scripts/camera_scanner.py"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Test: Audio Scanner",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "scripts/py_audio_scanner.py"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Test: Music Cache Scanner",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "scripts/music_cache_scanner.py"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Util: Generate Directory Tree",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "scripts/dir_tree.py"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Install: Requirements (Linux/Windows)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                "requirements.txt"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Install: Requirements (macOS)",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                "requirements_mac.txt"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Verify: Installation",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-c",
+                "import sounddevice; import opuslib; import PyQt5.QtCore as q; print('✓ All imports OK'); print('✓ PyQt5 version:', q.QT_VERSION_STR)"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Clean: Remove Python Cache",
+            "type": "shell",
+            "command": "find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || echo 'Cache cleaned'",
+            "windows": {
+                "command": "Get-ChildItem -Recurse -Directory -Filter __pycache__ | Remove-Item -Recurse -Force"
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}

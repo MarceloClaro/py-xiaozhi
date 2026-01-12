@@ -130,7 +130,11 @@ py-xiaozhi 是一个使用 Python 实现的小智语音客户端，旨在通过�
 - 仔细阅读 [项目文档](https://huangjunsen0406.github.io/py-xiaozhi/) 启动教程和文件说明都在里面了
 - main是最新代码，每次更新都需要手动重新安装一次pip依赖防止我新增依赖后你们本地没有
 
-[从零开始使用小智客户端（视频教程）](https://www.bilibili.com/video/BV1dWQhYEEmq/?vd_source=2065ec11f7577e7107a55bbdc3d12fce)
+### 📖 快速开始指南
+
+- **[VSCode 完整指南（葡萄牙语）](GUIA_VSCODE_PT.md)** - 详细的 VSCode 设置和运行指南
+- **[VSCode Complete Guide (English)](VSCODE_GUIDE_EN.md)** - Complete setup and run guide for VSCode
+- [从零开始使用小智客户端（视频教程）](https://www.bilibili.com/video/BV1dWQhYEEmq/?vd_source=2065ec11f7577e7107a55bbdc3d12fce)
 
 ## 技术架构
 
