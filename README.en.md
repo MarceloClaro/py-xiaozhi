@@ -131,7 +131,11 @@ py-xiaozhi is a Python-based Xiaozhi voice client, designed to learn coding and 
 - Carefully read [项目文档](https://huangjunsen0406.github.io/py-xiaozhi/) for startup tutorials and file descriptions
 - The main branch has the latest code; manually reinstall pip dependencies after each update to ensure you have new dependencies
 
-[Zero to Xiaozhi Client (Video Tutorial)](https://www.bilibili.com/video/BV1dWQhYEEmq/?vd_source=2065ec11f7577e7107a55bbdc3d12fce)
+### 📖 Quick Start Guides
+
+- **[VSCode Complete Guide (English)](VSCODE_GUIDE_EN.md)** - Complete setup and run guide for VSCode
+- **[Guia Completo VSCode (Português)](GUIA_VSCODE_PT.md)** - Guia completo de configuração e execução no VSCode
+- [Zero to Xiaozhi Client (Video Tutorial)](https://www.bilibili.com/video/BV1dWQhYEEmq/?vd_source=2065ec11f7577e7107a55bbdc3d12fce)
 
 ## Technical Architecture
 
